@@ -28,3 +28,10 @@ int vlan1
 no shut
 end
 sh ip int br 
+
+conf t
+ip domain-name cisco.com
+crypto key generate rsa 
+1024
+end
+wr

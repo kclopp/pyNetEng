@@ -1,0 +1,37 @@
+hostname S7
+
+!
+enable secret 5 $1$Q0Cp$sBBHI8R9ScNytkrEaf1Fp0
+!
+username kevin privilege 15 secret 5 $1$HYim$qboz2rMhpjBPfQuTU1hRq/
+
+interface Vlan1
+ ip address 192.168.0.17 255.255.255.0
+!
+!
+line con 0
+ logging synchronous
+line aux 0
+line vty 0 4
+ logging synchronous
+ login local
+ transport input all
+line vty 5 15
+ logging synchronous
+ login local
+ transport input all
+!
+!
+end
+conf t
+int vlan1
+no shut
+end
+sh ip int br 
+
+conf t
+ip domain-name cisco.com
+crypto key generate rsa 
+1024
+end
+wr

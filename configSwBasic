@@ -35,3 +35,16 @@ crypto key generate rsa
 1024
 end
 wr
+
+conf t
+!
+vlan 2
+ name VLAN_2
+!
+vlan 3
+ name VLAN_3
+!
+end
+
+
+

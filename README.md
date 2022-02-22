@@ -13,3 +13,6 @@ Please forgive my constant spelling mistakes :)
 ## Telnet scripts
 pyTelRt0.py uses Telnet to remote into a Cisco Router to make CLI configurations 
 pyTelSw0.py uses Telnet to remote into a Cisco Switch to make CLI configurations
+
+## SSH scripts
+Sof far in my SSH scripts I've been using netmiko
